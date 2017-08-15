@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Terminal from 'react-bash'
+import Terminal from './Terminal/index'
 import history from './history'
 
 const bashHistory = [
