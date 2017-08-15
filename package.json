@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^15.6.1",
-    "react-bash": "^1.5.3",
+    "react-bash": "https://github.com/joshuachao39/react-bash/tarball/master",
     "react-dom": "^15.6.1",
     "react-pdf": "^1.8.3",
     "react-router-dom": "^4.1.2",
