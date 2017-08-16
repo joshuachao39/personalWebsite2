@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <Router history={history}>
-        <div style={{height: "100vh", width:"100vw"}}>
+        <div style={{height: "100%", width: "100%"}}>
           <Route exact path="/" component={Main}/>
           <Route path="/resume" component={Resume}/>
         </div>

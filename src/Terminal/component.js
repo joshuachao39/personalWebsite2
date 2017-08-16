@@ -63,6 +63,7 @@ var Terminal = function (_Component) {
         };
         _this.handleKeyDown = _this.handleKeyDown.bind(_this);
         _this.handleKeyUp = _this.handleKeyUp.bind(_this);
+        // _this.focusTerminal = _this.focusTerminal.bind(_this);
         return _this;
     }
 
@@ -234,6 +235,12 @@ var Terminal = function (_Component) {
             };
         }
     }, {
+        key: 'focus',
+        value: function focusTerminal() {
+            console.log("plz...")
+            this.refs.input.focus();
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this3 = this;
@@ -252,7 +259,7 @@ var Terminal = function (_Component) {
             var style = Object.assign({}, _styles2.default[theme] || _styles2.default.light, styles);
             return _react2.default.createElement(
                 'div',
-                { className: 'ReactBash', style: style.ReactBash },
+                { className: 'ReactBash', style: style.ReactBash, onClick: _this3.focusTerminal },
                 _react2.default.createElement(
                     'div',
                     { style: style.header },
