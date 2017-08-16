@@ -52,18 +52,18 @@ var about = exports.about = {
 
 const ucsd_text_title = "University of California, San Diego (2015-2019)"
 const ucsd_text_1 = "I'm loving it at UCSD right now! Here are some quick facts:"
-const ucsd_text_2 = "Class of 2019 (Rising Junior)"
-const ucsd_text_3 = "Jacobs School Scholar (full-ride scholarship, 0.0044% of class of 2019)"
-const ucsd_text_4 = "Regent's Scholar"
-const ucsd_text_5 = "Computer Science, B.S."
-const ucsd_text_6 = "3.93 GPA"
+const ucsd_text_2 = "- Class of 2019 (Rising Junior)"
+const ucsd_text_3 = "- Jacobs School Scholar (full-ride scholarship, 0.0044% of class of 2019)"
+const ucsd_text_4 = "- Regent's Scholar"
+const ucsd_text_5 = "- Computer Science, B.S."
+const ucsd_text_6 = "- 3.93 GPA"
 
 const msj_text_title = "Mission San Jose High School (2011-2015)"
 const msj_text_1 = "During my high school career, I really enjoyed participating in robotics competitions and learning Japanese! Here are some stats about me back in MSJHS:"
-const msj_text_2 = "3.99 GPA (unweighted)"
-const msj_text_3 = "2380 SAT I"
-const msj_text_4 = "800 SAT II Math, 800 SAT II Physics, 780 SAT II Biology"
-const msj_text_5 = "5 in AP Calculus AB, AP Physics B, AP Physics C: Mechanics, AP Physics C: E&M, AP Computer Science"
+const msj_text_2 = "- 3.99 GPA (unweighted)"
+const msj_text_3 = "- 2380 SAT I"
+const msj_text_4 = "- 800 SAT II Math, 800 SAT II Physics, 780 SAT II Biology"
+const msj_text_5 = "- 5 in AP Calculus AB, AP Physics B, AP Physics C: Mechanics, AP Physics C: E&M, AP Computer Science"
 
 var education = exports.education = {
      exec: function exec(state) {
@@ -93,13 +93,15 @@ var education = exports.education = {
 }
 
 const apple2017_title = "Apple Inc. (Summer 2017)"
-const apple2017_text_1 = "AR Stuff rn on the SDS team"
+const apple2017_text_1 = "Sehkret stuff on SDS rn"
 
 const research_title = "Security Research (Spring 2017)"
-const research_text_1 = "Description here"
+const research_text_1 = "I conducted research underneath professors Deian Stefan and Hovav Shacham."
+const research_text_2 = "Alongside Atyansh Jaiswal and Jonathan Luck, we developed a project that delegated non-browser TLS implementations to headless Chrome."
+const research_text_3 = "We also published Saber: Delegating Web Security to Browsers"
 
 const tutor_title = "UCSD CSE Tutoring (Fall 2016 - Present)"
-const tutor_text_1 = "Description here"
+const tutor_text_1 = "I'm super invested in UCSD's tutoring program, and I'm currently underneath Professor Gary Gillespie. I've tutored CSE 12 (Intro to Data Structures), CSE 15L (Software Tools), and CSE 110 (Software Engineering)."
 
 const apple2016_title = "Apple Inc. (Summer 2016)"
 const apple2016_text_1 = "I did a software engineering internship on the SDS (Strategic Data Solutions) team. I spearheaded a project that involved fraud detection, big data, and image processing techniques."
@@ -116,6 +118,8 @@ var experience = exports.experience = {
                                                                 {value: " "},
                                                                 {value: research_title},
                                                                 {value: research_text_1},
+                                                                {value: research_text_2},
+                                                                {value: research_text_3},
                                                                 {value: " "},
                                                                 {value: tutor_title},
                                                                 {value: tutor_text_1},

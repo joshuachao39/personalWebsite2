@@ -204,7 +204,6 @@ var Terminal = function (_Component) {
                     { style: style.prefix },
                     _this2.props.prefix + ' ~' + item.cwd + ' $'
                 ) : undefined;
-                console.log(item.value)
                 if (item.value.trim() == 0) {
                     // console.log("whitespace detected!")
                     return _react2.default.createElement("br", { 'data-test-id': 'history-' + key, key: key })
@@ -216,7 +215,9 @@ var Terminal = function (_Component) {
                          item.value == "Mediatek Inc. (Summer 2015)" ||
                          item.value == "Mobile Front-end Development" || 
                          item.value == "Web Front-end Development" ||
-                         item.value == "Big data infrastructure") {
+                         item.value == "Big data infrastructure" || 
+                         item.value == "Security Research (Spring 2017)" ||
+                         item.value == "UCSD CSE Tutoring (Fall 2016 - Present)") {
                     return _react2.default.createElement(
                         "strong",
                         { 'data-test-id': 'history-' + key, key: key },
@@ -237,7 +238,6 @@ var Terminal = function (_Component) {
     }, {
         key: 'focus',
         value: function focusTerminal() {
-            console.log("plz...")
             this.refs.input.focus();
         }
     }, {
