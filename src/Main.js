@@ -18,6 +18,22 @@ const extensions = {
     },
 }
 
+const structure = {
+    src: {
+        file1: { content: 'This is the text content for <file1> of <src>' },
+        file2: { content: 'This is the text content for <file2> of <src>' },
+        childDir1: {
+            file: { content: 'This is the text content for <file> of <src/childDir1>' },
+        },
+        childDir2: {
+        }
+    },
+    '.hiddenDir': {
+    },
+    '.hiddenFile': { content: 'This is a hidden file' },
+    file: { content: 'This is the text content for <file> of the root directory' },
+};
+
 
 
 class Main extends Component {
@@ -54,7 +70,7 @@ class Main extends Component {
 		                     borderRadius: "25px 25px 0px 0px",
 		                     boxShadow: "0px -5px 26px 10px rgba(0, 0, 0, 0.1)",
 		                     zIndex: 999}}>
-		          <Terminal prefix="joshchao@ucsd.edu" history={bashHistory} extensions={extensions}/>
+		          <Terminal prefix="joshchao@ucsd.edu" history={bashHistory} extensions={extensions} structure={structure}/>
 		        </div>
 
 		    	{/* This is the bottom part of the screen */}
@@ -64,9 +80,31 @@ class Main extends Component {
 		    		         borderRadius: "0px 0px 25px 25px",
 		    		         display: "flex",
 		    		         alignItems: "center",
+		    		         position: "relative",
 		    		         justifyContent: "center",
 		    		         boxShadow: "0px 5px 26px 10px rgba(0, 0, 0, 0.1)"}}>
-		    		<div style={{width: 40, height: 40, background: "#494949", borderRadius: "100px"}}>
+		    		<div style={{width: 40, height: 40, background: "#494949", borderRadius: "100px"}}></div>
+		    		{/*Post it note*/}
+		    		<div style={{width: (this.state.width * 0.15),
+		    		             height: 225,
+		    		             background: "#fff07f",
+		    		             position: "absolute",
+		    		             top: 50,
+		    		             left: 30,
+		    		             display: "flex",
+		    		             flexFlow: "column wrap",
+		    		             justifyContent: "center",
+		    		             alignItems: "center"}}>
+		    		    <p style={{margin: 0, fontFamily: "Just Another Hand", fontSize: 30, fontWeight: "bold", textDecoration: "underline", marginTop: 15}}> Help Commands </p>
+		    		    <ul style={{listStyle: "none", margin: "5px 0px 0px 0px", columnCount: 2, fontFamily: "Just Another Hand", fontSize: 35, lineHeight: "110%", padding: 0}}>
+		    		    	<li>clear</li>
+		    		    	<li>about</li>
+		    		    	<li>education</li>
+		    		    	<li>skills</li>
+		    		    	<li>projects</li>
+		    		    	<li>contact</li>
+		    		    	<li>resume</li>
+		    		    </ul>
 		    		</div>
 		    	</div>
 

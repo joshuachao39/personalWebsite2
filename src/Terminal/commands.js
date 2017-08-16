@@ -16,6 +16,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var helpCommands = ['clear', 'about', 'education', 'experience', 'skills', 'projects', 'contact', 'resume'];
+var advancedCommands = ['ls', 'cat', 'cd', 'pwd', 'echo', 'rm']
 
 var help = exports.help = {
     exec: function exec(state) {
@@ -190,17 +191,6 @@ var contact = exports.contact = {
     }
 }
 
-/*
-var contact = exports.contact = {
-    exec: function exec(state) {
-        // window.open('file:///c:/Users/joshuachao/Documents/Miscellaneous/workspace/personal-website-2/src/josh_resume.pdf')
-        history.push('/resume')
-        return Object.assign({}, state, state.history)
-    }
-}
-*/
-
-/*
 var ls = exports.ls = {
     exec: function exec(state, _ref) {
         var flags = _ref.flags;
@@ -237,14 +227,20 @@ var ls = exports.ls = {
             }
         }
     }
-}; */
+};
 
-/*
 var cat = exports.cat = {
     exec: function exec(state, _ref2) {
         var args = _ref2.args;
 
+        //console.log(_ref2)
+
         var path = args[0];
+        console.log("input is: " + path);
+        if (path == undefined) {
+            let err = _const.Errors.NO_INPUT
+            return Util.appendError(state, err)
+        }
         var relativePath = path.split('/');
         var fileName = relativePath.pop();
         var fullPath = Util.extractPath(relativePath.join('/'), state.cwd);
@@ -268,7 +264,7 @@ var cat = exports.cat = {
             });
         }
     }
-}; */
+}; 
 
 /*
 var mkdir = exports.mkdir = {
@@ -295,7 +291,7 @@ var mkdir = exports.mkdir = {
     }
 }; */
 
-/*
+
 var cd = exports.cd = {
     exec: function exec(state, _ref4) {
         var args = _ref4.args;
@@ -318,9 +314,9 @@ var cd = exports.cd = {
             return Object.assign({}, state, { cwd: fullPath });
         }
     }
-}; */
+}; 
 
-/*
+
 var pwd = exports.pwd = {
     exec: function exec(state) {
         var directory = '/' + state.cwd;
@@ -328,9 +324,9 @@ var pwd = exports.pwd = {
             history: state.history.concat({ value: directory })
         });
     }
-}; */
+}; 
 
-/*
+
 var echo = exports.echo = {
     exec: function exec(state, _ref5) {
         var input = _ref5.input;
@@ -344,7 +340,7 @@ var echo = exports.echo = {
             history: state.history.concat({ value: value })
         });
     }
-}; */
+}; 
 
 /*
 var printenv = exports.printenv = {

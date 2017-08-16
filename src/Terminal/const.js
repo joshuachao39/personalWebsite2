@@ -12,7 +12,8 @@ var Errors = exports.Errors = {
     FILE_EXISTS: 'mkdir: $1: File exists',
     NO_SUCH_FILE: 'cd: $1: That file or directory doesn\'t exist!',
     NOT_A_DIRECTORY: 'cd: $1: That isn\'t a directory!',
-    IS_A_DIRECTORY: 'cat: $1: You\'re trying to read a directory!'
+    IS_A_DIRECTORY: 'cat: $1: You\'re trying to read a directory!',
+    NO_INPUT: 'cat: You didn\'t give me any input!'
 };
 
 var EnvVariables = exports.EnvVariables = {
