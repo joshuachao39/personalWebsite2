@@ -3,6 +3,7 @@ import Terminal from './Terminal/index'
 import history from './history'
 
 import mug from './mug.svg'
+import Icon from './icon'
 
 const bashHistory = [
     { value: 'Welcome to Josh Chao\'s personal website!' },

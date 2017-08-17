@@ -169,7 +169,7 @@ var projects = exports.projects = {
         return Object.assign({},
                              state,
                              { history: state.history.concat([
-                                                                {value: "All my projects go here..."}
+                                                                {value: "Projects go here!"}
                                                             ])
                              }
         );
@@ -182,9 +182,7 @@ var contact = exports.contact = {
                              state,
                              { history: state.history.concat([
                                                                 {value: "If you still have any questions, don't hesitate to reach out!"},
-                                                                {value: "Email: joshua.chao39@gmail.com"},
-                                                                {value: "github: joshuachao39"},
-                                                                {value: "linkedin: joshuachao39"}
+                                                                {value: "contactInfo"}
                                                             ])
                              }
         );

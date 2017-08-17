@@ -22,6 +22,8 @@ var _styles = require('./styles');
 
 var _styles2 = _interopRequireDefault(_styles);
 
+var icon = require('../icon')
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -223,6 +225,39 @@ var Terminal = function (_Component) {
                         { 'data-test-id': 'history-' + key, key: key },
                         prefix,
                         item.value
+                    );
+                }
+                else if (item.value == "contactInfo") {
+                    return _react2.default.createElement(
+                        'div',
+                        { style: {height: 100, width: "100%", height:"100%", display: "flex", alignItems: "flex-start", justifyContent: "space-evenly", marginTop: 10, marginBottom: 5}},
+                        _react2.default.createElement(
+                            'i',
+                            {className: "fa fa-github-square", style: {fontSize: 80, display: "flex", flexFlow: "column nowrap", justifyContent: "center", textAlign: "center"}},
+                            _react2.default.createElement(
+                                'p',
+                                {style: {marginTop: 5, marginBottom: 0, fontSize: 20, fontFamily: "\'Inconsolata\', monospace"}},
+                                'joshuachao39'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'i',
+                             {className: "fa fa-linkedin-square", style: {fontSize: 80, display: "flex", flexFlow: "column nowrap", justifyContent: "center", textAlign: "center"}},
+                            _react2.default.createElement(
+                                'p',
+                                {style: {marginTop: 5, marginBottom: 0, fontSize: 20, fontFamily: "\'Inconsolata\', monospace"}},
+                                'joshuachao39'
+                            )
+                        ),
+                        _react2.default.createElement(
+                            'i',
+                             {className: "fa fa-envelope-square", style: {fontSize: 80, display: "flex", flexFlow: "column nowrap", justifyContent: "center", textAlign: "center"}},
+                            _react2.default.createElement(
+                                'p',
+                                {style: {marginTop: 5, marginBottom: 0, fontSize: 20, fontFamily: "\'Inconsolata\', monospace", maxWidth: 160, wordBreak: "break-all"}},
+                                'joshuachao39@gmail.com'
+                            )
+                        )
                     );
                 }
                 else {
